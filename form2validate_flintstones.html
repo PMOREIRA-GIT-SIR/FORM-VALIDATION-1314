@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script>
+	
+			function valida() {
+				var form_is_valid = true;
+				var error = "";
+				
+				if (document.getElementById("iname").value.length < 3) {
+					form_is_valid = false;
+					error += "nome deve ter mais do que 3 caracteres \n";
+				}
+				
+				// ....
+				
+				if (!form_is_valid) alert(error);
+				return form_is_valid;
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<form action="echo.php" method="get" onsubmit="return valida();">
+			<p>
+				<label for="iname">name</label>
+				<input type="text" id="iname" name="fname" />
+			</p>		
+			<p>
+				<label for="iemail">email</label>
+				<input type="text" id="iemail" name="femail" />
+			</p>
+			<p>
+				<label for="iusername">username:</label>
+				<input type="text" id="iusername" name="fusername" />
+			</p>
+			<p>
+				<label for="ipass">password:</label>
+				<input type="text" id="ipass" name="fpass" />
+			</p>
+			<p>
+				<label for="irpass">retype password:</label>
+				<input type="text" id="irpass" name="frpass" />
+			</p>
+			<p>
+				<label for="iacyear">academic year</label>
+				<input type="text" id="iacyear" name="facyear" />
+			</p>
+			<p>
+				<input type="submit" />
+				<input type="reset"/>
+			</p>
+
+			
+			
+		</form>
+	</body>
+</html>
